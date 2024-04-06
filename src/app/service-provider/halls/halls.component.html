@@ -1,0 +1,175 @@
+<div class="container-fluid">
+
+  <app-logo></app-logo>
+
+  <section  class="container-fluid container-lg flex flex-row justify-content-center ">
+
+    <div class="d-flex flex-column align-items-center position-relative gap-3 w-100 w-sm-100 w-md-50 w-lg-50 p-5">
+
+      <div class="position-absolute top-0 end-0">
+        <img src="../../../assets/img/Vector.png" class="d-none d-sm-block d-md-block d-lg-block">
+      </div>
+
+      <h2 class="dark-gray-color text-center mt-5 pt-5 fs-1 display-6">Hall Form</h2>
+
+      <form [formGroup]="hallform" class="d-flex flex-column align-items-center ">
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="name"> Hall Name : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter Hall Name" formControlName="Name" id="name" type="text" class="border-0 light-lav-color ">
+          </mat-form-field>
+        </div>
+
+        <!-- <div class="d-flex align-items-center justify-content-center gap-3">
+          <label class=" dark-gray-color col-form-label custom-label " for="name">Hall Name</label>
+          <input matInput formControlName="Name" id="name" type="text" class="border-0 light-lav-color" class="custom-input" >
+        </div> -->
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="Location"> Location : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="country , city" formControlName="Location" id="Location" type="text" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+
+          <!-- <div class=" d-flex align-items-center justify-content-center gap-3" >
+          <label class="dark-gray-color col-form-label custom-label" for="Location"  >Location </label>
+          <input matInput   formControlName="Location" id="Location" type="text" class="border-0 light-lav-color" class="custom-input"  >
+        </div> -->
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="MaxCapacity"> MaxCapacity : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="0" formControlName="MaxCapacity" id="MaxCapacity" type="number" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+        <!-- <div class="d-flex align-items-center justify-content-center gap-3 "  >
+          <label class="dark-gray-color col-form-label custom-label"  for="maxCapacity" >MaxCapacity </label>
+          <input matInput formControlName="MaxCapacity" id="maxCapacity" type="number" class="border-0 light-lav-color" class="custom-input" >
+        </div> -->
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="MinCapacity"> MinCapacity : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="0" formControlName="MinCapacity" id="MinCapacity" type="number" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+        <!-- <div class="d-flex align-items-center justify-content-center gap-3 "  >
+          <label class="dark-gray-color col-form-label custom-label"  for="minCapacity" >MinCapacity </label>
+          <input matInput formControlName="MinCapacity" id="minCapacity" type="number" class="border-0 light-lav-color" class="custom-input" >
+        </div> -->
+
+
+        <!-- <div class=" d-flex align-items-center justify-content-center gap-3 "   >
+          <label class="dark-gray-color col-form-label custom-label" for="price" >PersonalPrice </label>
+          <input matInput  formControlName="PersonalPrice" id="price" type="number" class="border-0 light-lav-color" class="custom-input" >
+        </div> -->
+
+
+
+        <!-- <div class=" d-flex align-items-center justify-content-center gap-3  " >
+          <label class="dark-gray-color col-form-label custom-label" for="type" >type </label>
+          <input matInput formControlName="Type" id="type" type="text" class="border-0 light-lav-color" class="custom-input" >
+        </div> -->
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="Description"> Description : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter Description" formControlName="Description" id="Description" type="text" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="OpenBuffet"> OpenBuffet : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter OpenBuffet" formControlName="OpenBuffet" id="OpenBuffet" type="text" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="SetMenue"> SetMenue : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter SetMenue" formControlName="SetMenue" id="SetMenue" type="text" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="HighTea"> HighTea : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter HighTea" formControlName="HighTea" id="HighTea" type="text" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="PriceOpenBuffetPerPerson"> PriceOpenBuffetPerPerson : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter PriceOpenBuffetPerPerson" formControlName="PriceOpenBuffetPerPerson" id="PriceOpenBuffetPerPerson" type="number" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="PriceSetMenuePerPerson"> PriceSetMenuePerPerson : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter PriceSetMenuePerPerson" formControlName="PriceSetMenuePerPerson" id="PriceSetMenuePerPerson" type="number" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3" for="PriceHighTeaPerPerson"> PriceHighTeaPerPerson : </label>
+          <mat-form-field class="w-67">
+            <input matInput placeholder="Enter PriceHighTeaPerPerson" formControlName="PriceHighTeaPerPerson" id="PriceHighTeaPerPerson" type="number" class="border-0 light-lav-color">
+          </mat-form-field>
+        </div>
+
+
+
+        
+
+
+
+
+
+
+        <!-- <div class="d-flex align-items-center justify-content-center gap-3"   >
+          <label class="dark-gray-color col-form-label custom-label" for="Description">Description </label>
+          <input matInput formControlName="Description" id="Description" type="text" class="border-0 light-lav-color" class="custom-input">
+        </div> -->
+
+        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
+          <label class ="label fs-6 pe-3 w-50" for="image"> Upload Images : </label>
+          <input (change)="onFileSelected($event)" id="image" name="image" accept="image/*" type="file" class="border-0 light-lav-color w-67" multiple>
+        </div>
+
+      <!-- Input field for uploading image -->
+        <!-- <div class="d-flex align-items-center justify-content-center gap-3">
+          <label class="dark-gray-color col-form-label custom-label" for="image">Upload Image:</label>
+          <input type="file" (change)="onFileSelected($event)" id="image" name="image" accept="image/*" class="custom-file-input" multiple>
+        </div> -->
+
+        <div class="d-flex justify-content-center mt-5 flex-row align-self-center mb-5">
+          <button type="submit" (click)="handleform()"  class="btn button-form px-5 d-flex align-items-center">
+            <span class="me-1">Add</span>
+            <span *ngIf="isloading" class="spinner-border spinner-border-sm ml-auto" role="status" aria-hidden="true"></span>
+          </button>
+        </div>
+
+          <!-- <div class=" d-flex align-items-center justify-content-center gap-3" >
+          <button type="submit" (click)="handleform()" class="btn button-form px-5 d-flex align-items-center">Add</button>
+        </div> -->
+        <p *ngIf="errMsg" class="alert alert-danger">{{errMsg}}</p>
+
+      </form>
+
+      <div class="position-absolute bottom-0 start-0">
+        <img src="../../../assets/img/Vector.png" class="img-rotat d-none d-sm-block d-md-block d-lg-block">
+      </div>
+
+    </div>
+</section>
+</div>

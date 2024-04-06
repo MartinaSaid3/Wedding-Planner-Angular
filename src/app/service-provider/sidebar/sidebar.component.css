@@ -1,0 +1,35 @@
+section{
+  height: auto;
+  background-color: var(--white);
+  margin: 0px;
+  padding: 0px;
+}
+
+.img{
+  width: 25%;
+}
+
+.btn-style{
+  color: var(--dark-gray-color);
+  font-weight: bolder;
+  background-color: none;
+}
+
+.btn-style:hover{
+  border-color: var(--light-lavandar-color);
+  color: var(--light-lavandar-color);
+  background-color: var(--white);
+}
+.btn-active,.btn-style:focus{
+  background-color: var(--light-lavandar-color);
+  color: white;
+}
+
+@media (width>1000px){
+  section{
+    height: 100vh;
+  }
+  .img{
+    width: 75%;
+  }
+}

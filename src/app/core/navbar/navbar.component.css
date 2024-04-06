@@ -1,0 +1,10 @@
+.index-z{
+  z-index: 1000;
+}
+
+.activelink{
+  color: var(--lav-color);
+  font-weight: 500;
+  border-bottom: 1px solid var(--lav-color);
+}
+

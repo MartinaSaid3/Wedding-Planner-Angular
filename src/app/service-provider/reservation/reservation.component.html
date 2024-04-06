@@ -1,0 +1,49 @@
+<div class = "bg d-flex flex-column justify-content-center">
+  <span class=" pt-5 ps-5 fs-5 dark-gray-color">
+    Hello Name
+    <span>
+      <mat-icon class="fs-5 pt-1">favorite</mat-icon>
+    </span>
+  </span>
+  <div class="p-5 d-flex flex-column gap-5 ">
+    <span class="lav-color fs-3">Reservation</span>
+    <div class="d-flex flex-column align-items-start w-100 h-auto gap-4">
+      <!----------------- start card section -------------------->
+      <section class="card bg-white h-auto d-flex flex-row align-items-center">
+        <a [routerLink]="['/service_provider/Halls/add_Hall']" class=" w-100 d-flex flex-row align-items-center text-decoration-none light-gray-color text-center gap-3">
+          <mat-icon class="bage-color fs-4 p-2 d-flex flex-row justify-content-center align-items-center border-end px-4">bar_chart</mat-icon>
+          <span class="d-flex flex-column justify-content-between p-2 w-100">
+            <span class="w-100 text-center dark-gray-color fs-6">Hall Name</span>
+            <span class="f-3">22</span>
+          </span>
+        </a>
+      </section>
+      <!----------------- end card section -------------------->
+      <section class="align-self-center w-100 table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Hall Name</th>
+              <th scope="col">Date</th>
+              <th scope="col">NumOfGuests</th>
+              <th scope="col">Special Request</th>
+              <th scope="col">Service</th>
+              <th scope="col">TotalPrice</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
+
+

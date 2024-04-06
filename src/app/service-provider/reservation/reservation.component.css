@@ -1,0 +1,44 @@
+.bg{
+  background-image: url('../../../assets/img/dashboard_background.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card{
+  width: 45%;
+}
+@media only screen and (min-width: 600px){
+  .card{
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 768px){
+  .card{
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .card{
+    width: 22%;
+  }
+}
+
+
+@media (width>990px){
+  div{
+    height: 100vh;
+    width: 78vw;
+  }
+}
+
+div{
+  height: 100vh;
+}
+
+.bage-color{
+  color: #125476;
+}

@@ -1,0 +1,57 @@
+<nav class="container-fluid bg-white index-z navbar navbar-expand-sm navbar-white">
+  <div class="container">
+
+    <div class="navbar-brand w-25">
+      <img src="../../assets/img/Logo.png" class="img-fluid">
+    </div>
+
+    <button *ngIf="isLogIn" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul  class="navbar-nav gap-3 ps-lg-5 ms-lg-5 align-self-end justify-content-center w-100">
+          <li class="nav-item">
+            <a *ngIf="hidde" class="nav-link" [routerLink]="['']" (click)="onNavLinkClick('header')" fragment="header" routerLinkActive="lav-color fw-3">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a *ngIf="hidde" class="nav-link" [routerLink]="['']" (click)="onNavLinkClick('about')" fragment="about" routerLinkActive="lav-color fw-3">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a *ngIf="hidde" class="nav-link" [routerLink]="['']" (click)="onNavLinkClick('gallary')" fragment="gallary" routerLinkActive="lav-color fw-3">Gallary</a>
+          </li>
+
+          <li class="nav-item">
+            <a *ngIf="hidde" class="nav-link" [routerLink]="['']" (click)="onNavLinkClick('team')"  fragment="team" routerLinkActive="lav-color fw-3">Our Team</a>
+          </li>
+
+          <li class="nav-item">
+            <a *ngIf="hidde" class="nav-link" [routerLink]="['']" (click)="onNavLinkClick('footer')" fragment="footer" routerLinkActive="lav-color fw-3 ">Contact Us</a>
+          </li>
+
+          <div *ngIf="!isLogIn" class="d-flex align-items-center align-self-center ms-auto">
+            <li class="nav-item">
+              <a [routerLink]='["/account/login"]' class="btn nav-link" routerLinkActive="lav-color fw-3 " > LogIn </a>
+            </li>
+
+              <span class="lav-color fs-3 ps-2 pe-2">|</span>
+
+            <li class="nav-item">
+              <a  [routerLink]="['/account/registration']" class="btn nav-link" routerLinkActive="lav-color fw-3 ">Registration</a>
+            </li>
+
+          </div>
+
+          <div *ngIf="isLogIn " class="ms-auto">
+            <li  class="nav-item">
+              <a (click)="logout()" class="nav-link lav-color">Log Out</a>
+            </li>
+          </div>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+

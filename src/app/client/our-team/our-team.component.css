@@ -1,0 +1,139 @@
+.card{
+  width: 90%;
+  border-radius: 0;
+}
+
+.branch{
+  top:-20px;
+  right: -67px;
+  z-index: 5;
+}
+
+.branch-reverse{
+  bottom:-20px;
+  left: -67px;
+  z-index: 5;
+  transform: rotate(180deg);
+}
+@media only screen and (min-width: 600px){
+  .card{
+  width: 80%;
+  }
+  .branch{
+    top:-20px;
+    right: -44px;
+  }
+
+  .branch-reverse{
+    bottom:-20px;
+    left: -44px;
+  }
+}
+@media only screen and (min-width: 768px){
+    .card{
+    width: 45%;
+  }
+  .branch{
+    top:-20px;
+    right: -67px;
+  }
+
+  .branch-reverse{
+    bottom:-20px;
+    left: -67px;
+  }
+}
+
+@media only screen and (min-width: 992px){
+    .card{
+    width: 30%;
+  }
+  .branch{
+    top:-20px;
+    right: -58px;
+  }
+
+  .branch-reverse{
+    bottom:-20px;
+    left: -58px;
+  }
+}
+
+.img-h{
+  height:200px;
+
+}
+
+/* .card-img-top{
+    border-radius: 50%;
+    height: 180px;
+    width: 180px ;
+    position: absolute;
+    left: 50px;
+    top: -80px;
+    object-fit: cover;
+}
+
+.card{
+    width: 75%;
+    position: relative;
+    cursor: pointer;
+    margin-top: 100px ;
+    border-radius: 150px;
+}
+.card-group{
+  width: 90%;
+} */
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+/* .card-body{
+  text-align: center;
+  margin-top: 80px;
+} */
+.bi{
+    font-size: 25px;
+}
+.bi-facebook:hover,.bi-linkedin:hover{
+    color: #0A66C2;
+    transition: .3s;
+}
+.bi-envelope-fill:hover{
+    color: rgb(227, 209, 104);
+    transition: .3s;
+}
+.bi-whatsapp:hover{
+    color: green;
+    transition: .3s;
+}
+@media only screen and (max-width: 600px) {
+    .card-img-top{
+        left: 48px !important;
+    }
+  }
+  .w-44{
+    width: 44%;
+    margin-left: -12px;
+  }
+  span{
+    border: 2px solid var(--dark-gray-color);
+    margin-bottom: 10px;
+  }
+
+
+  /* h2 {
+    text-align: center;
+    position: relative;
+    color: #8F8F8F;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    top: 80%;
+    right: 0;
+    height: 3px;
+    width: 43%;
+    background-color: #989898;
+    transform: translateY(-50%);
+  } */

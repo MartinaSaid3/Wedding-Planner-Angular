@@ -1,0 +1,116 @@
+<div class="d-flex flex-column gap-5">
+  <app-navbar></app-navbar>
+  <section class="container-fluid h-size gap-5 gap-lg-0 d-flex flex-row align-items-center flex-wrap justify-content-around">
+    <div class="w-size ">
+      <div class="gallery w-100">
+        <img src="https://assets.codepen.io/1506195/unsplash-1.jpg" alt="" />
+        <img src="https://assets.codepen.io/1506195/unsplash-7.jpg" alt="" />
+        <img src="https://assets.codepen.io/1506195/unsplash-3.jpg" alt="" />
+        <img src="https://assets.codepen.io/1506195/unsplash-2.jpg" alt="" />
+        <img src="https://assets.codepen.io/1506195/unsplash-6.jpg" alt="" />
+        <img src="https://assets.codepen.io/1506195/unsplash-0.jpg" alt="" />
+        <img src="https://assets.codepen.io/1506195/unsplash-8.jpg" alt="" />
+      </div>
+    </div>
+
+    <section class="w-size d-flex flex-column align-items-center gap-2 gap-lg-2 pb-3">
+      <h3 class="dark-gray-color fs-2 fw-bold w-100 text-center">{{thisHall?.name}}</h3>
+      <div class="d-flex flex-column align-items-center w-100 gap-lg-2 ">
+
+        <div class="w-75 d-flex flex-row justify-content-start gap-3">
+          <p class="gray-color w-25"> Description : </p>
+          <p class="light-lav-color">{{thisHall?.description}} </p>
+        </div>
+
+        <div class="w-75 d-flex flex-row justify-content-start gap-3">
+          <p class="gray-color w-25">
+            Services :
+          </p>
+          <div class="light-lav-color d-flex flex-column">
+            <p class="d-flex flex-row  gap-3">
+              <span>OpenBuffet : </span>
+              <span>{{thisHall?.openBuffet}}</span>
+            </p>
+
+            <p class="d-flex flex-row gap-3">
+              <span>SetMenu : </span>
+              <span>{{thisHall?.setMenue}}</span>
+            </p>
+
+            <p class="d-flex flex-row gap-3">
+              <span>HighTea : </span>
+              <span>{{thisHall?.highTea}}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="w-75 d-flex flex-row justify-content-start gap-3">
+          <p class="gray-color w-25"> Calculate Price : </p>
+          <div class="d-flex flex-column align-items-center gap-3">
+            <input type="number" class="form-control" [(ngModel)]="guestsnum" placeholder="number of guest">
+            <select class="form-control" [(ngModel)]="service">
+              <option value="openBuffet">openBuffet</option>
+              <option value="setmenu">SetMenu</option>
+              <option value="HighTea">HighTea</option>
+            </select>
+            <button type="button" class="btn button-form" (click)="getTotalPrice()">Calculate</button>
+            <p *ngIf="flage">{{totalPrice}}</p>
+          </div>
+
+
+        </div>
+
+        <div class="w-75 d-flex flex-row justify-content-start gap-3">
+          <p class="gray-color w-25">
+            Capacity :
+          </p>
+          <div class="light-lav-color d-flex flex-column">
+            <p class="d-flex flex-row  gap-3">
+              <span>Min Capacity: </span>
+              <span>{{thisHall?.minCapacity}} person</span>
+            </p>
+
+            <p class="d-flex flex-row gap-3">
+              <span>Max Capacity: </span>
+              <span>{{thisHall?.maxCapacity}} person</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="w-75 gap-3">
+          <p class="gray-color">Location : </p>
+          <div class="position-relative">
+            <google-map
+            height="250px"
+            width="100%"
+            [zoom]="zoom"
+            [center]="center"
+            [options]="options"
+            >
+            <map-marker
+              [position]="marker.position"
+              [label]="marker.label"
+              [title]="marker.title"
+              [options]="marker.options"
+
+            >
+            </map-marker>
+          </google-map>
+            <div class="position-absolute bottom-0 left-0 ps-2 pb-4 d-flex flex-column">
+              <button class="btn border-secondary bg-white rounded-1 px-3 fs-3 mb-1" (click)="zoomIn()">&plus;</button>
+              <button class="btn border-secondary bg-white rounded-1 px-3-2 fs-3" (click)="zoomOut()">&minus;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="w-75 d-flex flex-row justify-content-center">
+        <button (click)="Reserve()" class="btn button-form">Reseration</button>
+      </div>
+    </section>
+
+  </section>
+</div>
+

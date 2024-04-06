@@ -1,0 +1,20 @@
+
+<div class="container d-flex flex-column justify-content-around">
+  <app-navbar [hidde]= hidde></app-navbar>
+  <div class="row">
+    <div class="col-12 mt-5 d-flex align-items-start justify-content-around">
+        <div class="col-lg-4 col-md-4 d-none d-md-flex align-self-center">
+          <img src="../../../assets/img/SignUp_SignIn_image.png" class="img-fluid">
+        </div>
+        <div class="col-10 col-lg-6 col-md-7 col-sm-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+        <a [routerLink]="['/home']" class="text-decoration-none lav-background rounded-circle d-flex align-items-center justify-content-center px-4 py-1" style="width: 50px;height: 50px;">
+            <span class="fs-2">&#8619;</span>
+        </a>
+    </div>
+  </div>
+

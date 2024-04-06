@@ -1,0 +1,25 @@
+.flower{
+  margin-left: -12px;
+}
+
+.couple{
+  margin-right: -12px;
+  width: 85%;
+}
+
+@media (width>900px){
+  .header-text{
+  font-size: 50px;
+  line-height: 1em;
+ }
+}
+
+@media ( 992px>width>768px){
+  .w-header-text-md{
+    width: 50%;
+  }
+  .header-text{
+    font-size: 35px;
+   }
+}
+

@@ -1,0 +1,45 @@
+
+<section class=" d-flex flex-column align-items-center gap-5 pt-5">
+    <h2 class="dark-gray-color fs-1">Log In</h2>
+    <form (ngSubmit)="SubmitLogIn(LogInForm.value)" [formGroup]="LogInForm" class="d-flex flex-column w-75">
+      <mat-form-field>
+        <div class="d-flex flex-column w-75">
+          <label class ="label">UserName</label>
+          <input matInput [(ngModel)]="username" formControlName="UserName" type="text" class="border-0 light-lav-color">
+        </div>
+      </mat-form-field>
+
+      <div *ngIf="LogInForm.get('UserName')?.errors && LogInForm.get('UserName')?.touched" class="text-danger text-center">
+        <p *ngIf="LogInForm.get('UserName')?.getError('required')">UserName is Required</p>
+        <p *ngIf="LogInForm.get('UserName')?.getError('pattern')">UserName must be Start Capital & contain 8-12 character </p>
+      </div>
+
+        <mat-form-field>
+          <div class="d-flex flex-column w-75">
+            <label class ="label">Password</label>
+            <input matInput [(ngModel)]="pass" formControlName="Password" type="password" class="border-0  light-lav-color">
+          </div>
+        </mat-form-field>
+
+        <div *ngIf="LogInForm.get('Password')?.errors && LogInForm.get('Password')?.touched" class="text-danger text-center">
+          <p *ngIf="LogInForm.get('Password')?.getError('required')">Password is Required</p>
+          <p *ngIf="LogInForm.get('Password')?.getError('pattern')">Password must be in this format </p>
+        </div>
+
+        <div class="text-start w-75 d-flex">
+          <p class="gray-color">If You Don't have account - </p>
+          <a [routerLink]="['/account/registration']" class="text-decoration-none fw-bold light-lav-color ms-3">Register</a>
+          <a (click)="forget()" routerLink="" class="text-decoration-none fw-bold light-lav-color ms-auto">Forget Password ?</a>
+        </div>
+
+        <div *ngIf="error" class="alert alert-danger bg-white text-danger">{{error}}</div>
+
+        <div class="d-flex justify-content-end flex-row align-self-end">
+          <button [disabled]="LogInForm.invalid" class="btn button-form px-5 d-flex align-items-center">
+            <span class="me-1">Log In</span>
+            <span *ngIf="isLoading" class="spinner-border spinner-border-sm ml-auto" role="status" aria-hidden="true"></span>
+          </button>
+        </div>
+    </form>
+</section>
+

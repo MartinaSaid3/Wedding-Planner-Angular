@@ -1,0 +1,35 @@
+input,select{
+  outline: none;
+  background-color: #00000000;
+}
+input:active,select:active{
+  outline: none;
+  background-color: none;
+}
+/* .link{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.a-link{
+  color: #D9D9D9;
+  border: 1px solid #D9D9D9;
+}
+
+a.a-link:hover{
+  background-color: #6C2C70;
+  color: white;
+}
+
+.w-40{
+  width: 40%;
+}
+
+hr{
+  border: 1px solid;
+}
+
+h1{
+  color:#474D59;
+} */

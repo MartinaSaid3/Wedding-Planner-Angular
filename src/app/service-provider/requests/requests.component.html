@@ -1,0 +1,32 @@
+<!-- <div
+  class="table-responsive"
+>
+  <table
+    class="table table-primary"
+  >
+    <thead>
+      <tr>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="" *ngFor="let client of providersData">
+        <td scope="row">{{client.id}}</td>
+        <td>{{client.name}}</td>
+        <td>{{client.role}}</td>
+        <td>
+          <button (click)="show(ID=client.id)">Show Data</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <input type="text" [(ngModel)]="ID">
+  <button (click)="show(ID)">Search</button>
+</div>
+
+<app-details [ID]="ID"  [cli]="client" (onhide)="status=false" *ngIf="status"></app-details> -->
+

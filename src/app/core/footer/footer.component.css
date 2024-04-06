@@ -1,0 +1,51 @@
+
+#imggg{
+    width: 130px;
+    margin-top: -50px;
+    margin-bottom: -35px;
+}
+.w-46{
+  width: 46%;
+}
+span{
+  border: 2px solid var(--dark-gray-color);
+  margin-bottom: 10px;
+  margin-right: -12px;
+}
+
+.icon{
+  font-size: 3em;
+  margin-right: 5px;
+}
+.w-30{
+  width: 30%;
+}
+.w-size{
+  width: 90%;
+  border-radius: 0;
+}
+@media only screen and (min-width: 600px){
+.w-size{
+  width: 80%;
+  justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px){
+  .w-size{
+    width: 45%;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .w-size{
+    width: 30%;
+  }
+}
+
+.p-line-height{
+  line-height: .3em;
+}
+
+
+

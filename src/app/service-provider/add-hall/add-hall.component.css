@@ -1,0 +1,31 @@
+.bg{
+  background-image: url('../../../assets/img/dashboard_background.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card{
+  height: auto;
+  width: 20%;
+}
+@media (width>990px){
+  div{
+    height: 100vh;
+    width: 78vw;
+  }
+}
+
+div{
+  height: 100vh;
+}
+
+table tr th{
+  color: var(--lavandar-color)!important;
+}
+
+table tr td{
+  color: var(--gray-color)!important;
+}
