@@ -1,61 +1,111 @@
-
-<section class=" d-flex flex-column align-items-center gap-5 pt-5">
+<section class="d-flex flex-column align-items-center gap-5 pt-5">
   <h2 class="dark-gray-color fs-1">Reset Password</h2>
-  <form (ngSubmit)="ResetPass(Reset.value)" [formGroup]="Reset" class="d-flex flex-column w-75">
+  <form
+    (ngSubmit)="ResetPass()"
+    [formGroup]="Reset"
+    class="d-flex flex-column w-75"
+  >
     <mat-form-field>
       <div class="d-flex flex-column w-75">
-        <label class ="label">UserName</label>
-        <input matInput formControlName="UserName" type="text" class="border-0 light-lav-color">
+        <label class="label">UserName</label>
+        <input
+          matInput
+          formControlName="userName"
+          type="text"
+          class="border-0 light-lav-color"
+        />
       </div>
     </mat-form-field>
 
-    <div *ngIf="Reset.get('UserName')?.errors && Reset.get('UserName')?.touched" class="text-danger text-center">
-      <p *ngIf="Reset.get('UserName')?.getError('required')">UserName is Required</p>
-      <p *ngIf="Reset.get('UserName')?.getError('pattern')">UserName must be Start Capital & contain 8-12 character </p>
+    <div
+      *ngIf="Reset.get('userName')?.errors && Reset.get('userName')?.touched"
+      class="text-danger text-center"
+    >
+      <p *ngIf="Reset.get('userName')?.getError('required')">
+        UserName is Required
+      </p>
+      <p *ngIf="Reset.get('userName')?.getError('pattern')">
+        UserName must be Start Capital & contain 8-12 character
+      </p>
     </div>
 
-    <mat-form-field hidden>
+    <mat-form-field>
       <div class="d-flex flex-column w-75">
-        <input hidden matInput formControlName="token" [value]="Token" class="border-0 light-lav-color">
+        <label class="label">New Password</label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          class="border-0 light-lav-color"
+        />
       </div>
     </mat-form-field>
 
-      <mat-form-field>
-        <div class="d-flex flex-column w-75">
-          <label class ="label">New Password</label>
-          <input matInput formControlName="New_Password" type="password" class="border-0  light-lav-color">
-        </div>
-      </mat-form-field>
+    <div
+      *ngIf="Reset.get('password')?.errors && Reset.get('password')?.touched"
+      class="text-danger text-center"
+    >
+      <p *ngIf="Reset.get('password')?.getError('required')">
+        Password is Required
+      </p>
+      <p *ngIf="Reset.get('password')?.getError('pattern')">
+        Password must be in this format
+      </p>
+    </div>
 
-      <div *ngIf="Reset.get('New_Password')?.errors && Reset.get('New_Password')?.touched" class="text-danger text-center">
-        <p *ngIf="Reset.get('New_Password')?.getError('required')">Password is Required</p>
-        <p *ngIf="Reset.get('New_Password')?.getError('pattern')">Password must be in this format </p>
+    <mat-form-field>
+      <div class="d-flex flex-column w-75">
+        <label class="label">Confirm Password</label>
+        <input
+          matInput
+          formControlName="confirmPassword"
+          type="password"
+          class="border-0 light-lav-color"
+        />
       </div>
+    </mat-form-field>
 
-      <mat-form-field>
-        <div class="d-flex flex-column w-75">
-          <label class ="label">Confirm Password</label>
-          <input matInput formControlName="Confirm_Password" type="password" class="border-0  light-lav-color">
-        </div>
-      </mat-form-field>
+    <div
+      *ngIf="
+        Reset.get('confirmPassword')?.errors &&
+        Reset.get('confirmPassword')?.touched
+      "
+      class="text-danger text-center"
+    >
+      <p *ngIf="Reset.get('confirmPassword')?.getError('required')">
+        Password is Required
+      </p>
+      <p *ngIf="Reset.get('confirmPassword')?.getError('pattern')">
+        Password must be in this format
+      </p>
+    </div>
 
-      <div *ngIf="Reset.get('Confirm_Password')?.errors && Reset.get('Confirm_Password')?.touched" class="text-danger text-center">
-        <p *ngIf="Reset.get('Confirm_Password')?.getError('required')">Password is Required</p>
-        <p *ngIf="Reset.get('Confirm_Password')?.getError('pattern')">Password must be in this format </p>
-      </div>
+    <div class="text-start w-75 d-flex">
+      <p class="gray-color">If You Don't have account -</p>
+      <a
+        [routerLink]="['/account/registration']"
+        class="text-decoration-none fw-bold light-lav-color ms-3"
+        >Register</a
+      >
+    </div>
 
-      <div class="text-start w-75 d-flex">
-        <p class="gray-color">If You Don't have account - </p>
-        <a [routerLink]="['/account/registration']" class="text-decoration-none fw-bold light-lav-color ms-3">Register</a>
-      </div>
+    <div *ngIf="error" class="alert alert-danger bg-white text-danger">
+      {{ error }}
+    </div>
 
-      <div *ngIf="error" class="alert alert-danger bg-white text-danger">{{error}}</div>
-
-      <div class="d-flex justify-content-end flex-row align-self-end">
-        <button [disabled]="Reset.invalid" class="btn button-form px-5 d-flex align-items-center">
-          <span class="me-1">Reset</span>
-          <span *ngIf="isLoading" class="spinner-border spinner-border-sm ml-auto" role="status" aria-hidden="true"></span>
-        </button>
-      </div>
+    <div class="d-flex justify-content-end flex-row align-self-end">
+      <button
+        [disabled]="Reset.invalid"
+        class="btn button-form px-5 d-flex align-items-center"
+      >
+        <span class="me-1">Reset</span>
+        <span
+          *ngIf="isLoading"
+          class="spinner-border spinner-border-sm ml-auto"
+          role="status"
+          aria-hidden="true"
+        ></span>
+      </button>
+    </div>
   </form>
 </section>

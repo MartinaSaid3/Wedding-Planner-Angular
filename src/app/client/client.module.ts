@@ -14,7 +14,6 @@ import { HallDetailsComponent } from './hall-details/hall-details.component';
 import { ReservationFormComponent } from './reservation-form/reservation-form.component';
 
 import { GoogleMapsModule } from '@angular/google-maps';
-import { NgImageSliderModule } from 'ng-image-slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
@@ -40,18 +39,24 @@ import { MatIconModule } from '@angular/material/icon';
     ReservationFormComponent,
   ],
   imports: [
-    CommonModule, CoreModule,RouterModule,AccountModule,GoogleMapsModule , NgImageSliderModule,FormsModule,
-    ReactiveFormsModule,MatFormFieldModule,MatInputModule,MatNativeDateModule,MatDatepickerModule,
+    CommonModule,
+    CoreModule,
+    RouterModule,
+    AccountModule,
+    GoogleMapsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     MatCardModule,
     MatFormFieldModule,
     MatButtonModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
   ],
-  exports:[
-    HomeComponent,
-  ],
+  exports: [HomeComponent],
   // providers:[{provide : HTTP_INTERCEPTORS,useClass: httperrorInterceptor}]
-
 })
-export class ClientModule { }
+export class ClientModule {}

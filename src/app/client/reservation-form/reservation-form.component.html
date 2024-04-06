@@ -1,97 +1,201 @@
 <div class="container-fluid">
-
   <app-logo></app-logo>
 
-  <section  class="container-fluid container-lg flex flex-row justify-content-center ">
-
-    <div class="d-flex flex-column align-items-center position-relative gap-3 w-100 w-sm-100 w-md-50 w-lg-50 p-5">
-
+  <section
+    class="container-fluid container-lg flex flex-row justify-content-center"
+  >
+    <div
+      class="d-flex flex-column align-items-center position-relative gap-3 w-100 w-sm-100 w-md-50 w-lg-50 p-5"
+    >
       <div class="position-absolute top-0 end-0">
-        <img src="../../../assets/img/Vector.png" class="d-none d-sm-block d-md-block d-lg-block">
+        <img
+          src="../../../assets/img/Vector.png"
+          class="d-none d-sm-block d-md-block d-lg-block"
+        />
       </div>
 
-      <h2 class="dark-gray-color text-center mt-5 pt-5 fs-1 display-6">Reservation</h2>
+      <h2 class="dark-gray-color text-center mt-5 pt-5 fs-1 display-6">
+        Reservation
+      </h2>
 
-      <form (ngSubmit)="Reservation(ReservationForm.value)" [formGroup]="ReservationForm" class="d-flex flex-column align-items-center ">
-
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
-          <label class ="label fs-6 " for="name"> Hall Name : </label>
-          <mat-form-field class = "w-67">
-            <input matInput id="name" [value]="thisHall?.name" type="text" class="border-0 light-lav-color " disabled="true">
+      <form
+        (ngSubmit)="Reservation(ReservationForm.value)"
+        [formGroup]="ReservationForm"
+        class="d-flex flex-column align-items-center"
+      >
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100"
+        >
+          <label class="label fs-6" for="name"> Hall Name : </label>
+          <mat-form-field class="w-67">
+            <input
+              matInput
+              id="name"
+              [value]="thisHall?.name"
+              type="text"
+              class="border-0 light-lav-color"
+              disabled="true"
+            />
           </mat-form-field>
         </div>
 
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100 d-none">
-          <label class ="label fs-6 " for="VenueId"> Hall Id : </label>
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100 d-none"
+        >
+          <label class="label fs-6" for="VenueId"> Hall Id : </label>
           <mat-form-field class="w-67">
-            <input matInput formControlName="venueId" id="VenueId" [value]="thisHall?.id" type="number" class="border-0 light-lav-color">
+            <input
+              matInput
+              formControlName="venueId"
+              id="VenueId"
+              [value]="thisHall?.id"
+              type="number"
+              class="border-0 light-lav-color"
+            />
           </mat-form-field>
         </div>
 
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
-          <label class ="label fs-6 " for="Date"> Date : </label>
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100"
+        >
+          <label class="label fs-6" for="Date"> Date : </label>
           <mat-form-field class="w-67">
-            <input matInput [matDatepickerFilter]="isDateDisabled" [matDatepicker]="picker" placeholder="Choose a date" readonly formControlName="date" id="Date" class="border-0 light-lav-color">
+            <input
+              matInput
+              [matDatepickerFilter]="isDateDisabled"
+              [matDatepicker]="picker"
+              placeholder="Choose a date"
+              readonly
+              formControlName="date"
+              id="Date"
+              class="border-0 light-lav-color"
+            />
             <!-- <input matInput [matDatepickerFilter]="isDateDisabled" formControlName="selectedDate" placeholder="Choose a date" readonly> -->
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
         </div>
 
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
-          <label class ="label fs-6 " for="NumOfGuests"> NumOfGuests : </label>
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100"
+        >
+          <label class="label fs-6" for="NumOfGuests"> NumOfGuests : </label>
           <mat-form-field class="w-67">
-            <input matInput formControlName="numOfGuests" placeholder="Choose a number" id="NumOfGuests" type="number" class="border-0 light-lav-color">
+            <input
+              matInput
+              formControlName="numOfGuests"
+              placeholder="Choose a number"
+              id="NumOfGuests"
+              type="number"
+              class="border-0 light-lav-color"
+            />
           </mat-form-field>
         </div>
 
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
-          <label class ="label fs-6 " for="PersonalPrice"> Services : </label>
-          <mat-select formControlName="services" placeholder="Choose a service" id="Service"  class="w-50 border-0 light-lav-color" required>
-            <mat-option class="light-lav-color" value = "Openbuffer">Openbuffer</mat-option>
-            <mat-option class="light-lav-color" value = "SetMenue">SetMenue</mat-option>
-            <mat-option class="light-lav-color" value = "Hightea">Hightea</mat-option>
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100"
+        >
+          <label class="label fs-6" for="PersonalPrice"> Services : </label>
+          <mat-select
+            formControlName="services"
+            placeholder="Choose a service"
+            id="Service"
+            class="w-50 border-0 light-lav-color"
+            required
+          >
+            <mat-option class="light-lav-color" value="Openbuffer"
+              >Openbuffer</mat-option
+            >
+            <mat-option class="light-lav-color" value="SetMenue"
+              >SetMenue</mat-option
+            >
+            <mat-option class="light-lav-color" value="Hightea"
+              >Hightea</mat-option
+            >
           </mat-select>
         </div>
 
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
-          <label class ="label fs-6 " for="specialRequest"> specialRequest : </label>
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100"
+        >
+          <label class="label fs-6" for="specialRequest">
+            specialRequest :
+          </label>
           <mat-form-field class="w-67">
-            <input matInput formControlName="specialRequest" placeholder="write special request" id="specialRequest" type="text" class="border-0 light-lav-color">
+            <input
+              matInput
+              formControlName="specialRequest"
+              placeholder="write special request"
+              id="specialRequest"
+              type="text"
+              class="border-0 light-lav-color"
+            />
           </mat-form-field>
         </div>
 
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
-          <label class ="label fs-6 " for="PersonalPrice"> Payment : </label>
-          <mat-select id="Service" placeholder="Choose a payment Method"  class="w-50 border-0 light-lav-color" required>
-            <mat-option class="light-lav-color" value = "PayPal">PayPal</mat-option>
-            <mat-option class="light-lav-color" value = "Venue">Venue</mat-option>
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100"
+        >
+          <label class="label fs-6" for="PersonalPrice"> Payment : </label>
+          <mat-select
+            id="Service"
+            placeholder="Choose a payment Method"
+            class="w-50 border-0 light-lav-color"
+            required
+          >
+            <mat-option class="light-lav-color" value="PayPal"
+              >PayPal</mat-option
+            >
+            <mat-option class="light-lav-color" value="Venue">Venue</mat-option>
           </mat-select>
         </div>
 
-        <div class="d-flex flex-row gap-3 align-items-center justify-content-between w-100">
-          <label class ="label fs-6 " for="Email"> Email : </label>
+        <div
+          class="d-flex flex-row gap-3 align-items-center justify-content-between w-100"
+        >
+          <label class="label fs-6" for="Email"> Email : </label>
           <mat-form-field class="w-67">
-            <input matInput formControlName="email" placeholder="Write Your Enail" id="Email" type="text" class="border-0 light-lav-color">
+            <input
+              matInput
+              formControlName="email"
+              placeholder="Write Your Enail"
+              id="Email"
+              type="text"
+              class="border-0 light-lav-color"
+            />
           </mat-form-field>
         </div>
 
-        <div class="d-flex justify-content-center mt-5 flex-row align-self-center mb-5">
-          <button type="submit" [disabled]="ReservationForm.invalid" class="btn button-form px-5 d-flex align-items-center">
+        <div
+          class="d-flex justify-content-center mt-5 flex-row align-self-center mb-5"
+        >
+          <button
+            type="submit"
+            [disabled]="ReservationForm.invalid"
+            class="btn button-form px-5 d-flex align-items-center"
+          >
             <span class="me-1">Reservation</span>
-            <span *ngIf="isloading" class="spinner-border spinner-border-sm ml-auto" role="status" aria-hidden="true"></span>
+            <span
+              *ngIf="isloading"
+              class="spinner-border spinner-border-sm ml-auto"
+              role="status"
+              aria-hidden="true"
+            ></span>
           </button>
         </div>
 
-        <p *ngIf="errMsg" class="alert alert-danger">{{errMsg}}</p>
-
+        <p *ngIf="errMsg" class="alert alert-danger">{{ errMsg }}</p>
       </form>
 
       <div class="position-absolute bottom-0 start-0">
-        <img src="../../../assets/img/Vector.png" class="img-rotat d-none d-sm-block d-md-block d-lg-block">
+        <img
+          src="../../../assets/img/Vector.png"
+          class="img-rotat d-none d-sm-block d-md-block d-lg-block"
+        />
       </div>
-
     </div>
-</section>
+  </section>
 </div>
-

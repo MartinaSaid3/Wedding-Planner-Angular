@@ -25,47 +25,64 @@ import { ReservationComponent } from './service-provider/reservation/reservation
 import { ReservationRequestsComponent } from './service-provider/reservation-requests/reservation-requests.component';
 import { UpdateComponent } from './service-provider/update/update.component';
 
-
 const routes: Routes = [
-  {path:'account',component:AccountComponent ,children:[
-    {path:'',component:LoginComponent},
-    {path:'login',component:LoginComponent},
-    {path:'registration',component:RegistrationComponent},
-    {path:'reset/:token',component:ResetComponent}
-  ]},
+  {
+    path: 'account',
+    component: AccountComponent,
+    children: [
+      { path: '', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'registration', component: RegistrationComponent },
+      { path: 'reset', component: ResetComponent },
+    ],
+  },
 
-  {path:'home',component:HomeComponent,children:[
-    {path:'',component:HomeBodyComponent},
-  ]},
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [{ path: '', component: HomeBodyComponent }],
+  },
 
-  {path:'home/Details/:id',component:HallDetailsComponent},
+  { path: 'home/Details/:id', component: HallDetailsComponent },
 
-  {path:'client/Reservation/:id',canActivate:[AuthGuard],component:ReservationFormComponent},
+  {
+    path: 'client/Reservation/:id',
+    canActivate: [AuthGuard],
+    component: ReservationFormComponent,
+  },
 
-  {path:'service_provider',component:DashboardComponent,children:[
-    {path:'',component:AddHallComponent},
-    {path:'Halls',component:AddHallComponent},
-    {path:'update',component:UpdateComponent},
-    {path:'requests',component:ReservationRequestsComponent},
-    {path:'reservation',component:ReservationComponent},
-  ]},
+  {
+    path: 'service_provider',
+    component: DashboardComponent,
+    children: [
+      { path: '', component: AddHallComponent },
+      { path: 'Halls', component: AddHallComponent },
+      { path: 'update', component: UpdateComponent },
+      { path: 'requests', component: ReservationRequestsComponent },
+      { path: 'reservation', component: ReservationComponent },
+    ],
+  },
 
-  {path:'admin',component:AdminDashboardComponent,children:[
-    {path:'',component:UsersDataComponent},
-    {path:'users',component:UsersDataComponent},
-    {path:'service_provider',component:ServiceProviderDataComponent},
-    {path:'requests',component:AdminRequestsComponent},
-  ]},
+  {
+    path: 'admin',
+    component: AdminDashboardComponent,
+    children: [
+      { path: '', component: UsersDataComponent },
+      { path: 'users', component: UsersDataComponent },
+      { path: 'service_provider', component: ServiceProviderDataComponent },
+      { path: 'requests', component: AdminRequestsComponent },
+    ],
+  },
 
-  {path:'service_provider/Halls/add_Hall',component:HallsComponent},
+  { path: 'service_provider/Halls/add_Hall', component: HallsComponent },
 
-  {path:'',redirectTo:'home',pathMatch:'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
-  {path:'**',component:ErrorComponent}
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
-  imports: [ RouterModule,RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
