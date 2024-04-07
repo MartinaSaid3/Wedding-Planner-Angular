@@ -56,7 +56,7 @@ export class AuthService {
 
   ResetPassword(ResetData: ResetPasswordDto) {
     return this._HTTpClient.post<object>(
-      'http://localhost:5291/api/Account/ForgetPassword',
+      'http://localhost:5291/api/Account/ResetPassword',
       ResetData
     );
   }
